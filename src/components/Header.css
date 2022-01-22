@@ -1,4 +1,6 @@
 header {
+  z-index: 1000;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,23 +11,21 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 10%;
+  background-color: #111010;
+  width: 100%;
+  height: 10vh;
 }
 
 .logo {
   cursor: pointer;
-  height: 51.33px;
-  width: 149px;
+  width: 10vw;
   display: inline-block;
-}
-
-.nav-list {
-  list-style: none;
 }
 
 header li, a, button {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
   display: inline-block;
   color: floralwhite;
   text-decoration: none;
@@ -33,6 +33,7 @@ header li, a, button {
 
 .nav-list {
   list-style: none;
+  margin: 0;
 }
 
 .nav-list li {

@@ -1,11 +1,11 @@
 import React from "react";
 import "./Header.css"
 
-
 export default function Header() {
+
     return (
         <header>
-            <img className="logo" src="./assets/sneakerfreak.png" alt="logo" />
+            <img className="logo" src="/images/sneakerfreak.png" alt="logo" />
             <nav>
                 <ul className="nav-list">
                     <li className="nav-list__item"> <a href="index.html"> Home </a></li>

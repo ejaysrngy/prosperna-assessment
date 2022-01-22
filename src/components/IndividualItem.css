@@ -1,0 +1,40 @@
+.item-container {
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  max-width: 310px;
+  padding-top: 10px;
+  margin: 2%;
+}
+
+.item-container img {
+  position: relative;
+  left: -5px;
+  width: 296px;
+  border-radius: 20px;
+}
+
+.item-container__desc {
+  margin: 5px 0 0 0;
+  text-align: left;
+}
+
+.item-container__buyNow {
+  text-align: right;
+}
+
+.item-container__buyNow button {
+  margin-bottom: 10px;
+  border-style: none;
+  color: white;
+  background-color: black;
+  padding: 5px 15px;
+  border-radius: 50px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.item-container__buyNow button:hover {
+  background-color: white;
+  color: black;
+}
+/*# sourceMappingURL=IndividualItem.css.map */
