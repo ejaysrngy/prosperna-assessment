@@ -1,0 +1,57 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+    height: 51.33px;
+    width: 149px;
+    display: inline-block;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+header li, a, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: inline-block;
+    color: floralwhite;
+    text-decoration: none;
+}
+
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-list li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-list li a:hover {
+    color: #6a5e5e;
+}
+
+.contact button {
+    background-color: #6a5e5e;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.contact button:hover {
+    background-color: #111010;
+}
