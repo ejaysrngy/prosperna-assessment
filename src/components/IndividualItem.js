@@ -12,10 +12,10 @@ export default function IndividualItem({
     <div className="item-container">
       <img src={itemImg} alt={itemName}/>
       <div className="item-container__desc col-lg">
-        <h5> {itemName} </h5>
-        <h6>
+        <h6> {itemName} </h6>
+        <h5>
           Php {itemPrice.toLocaleString(undefined, { minimumFractionDigits: 2 })}
-        </h6>
+        </h5>
       </div>
       <div className="item-container__buyNow">
           <button> Buy Now </button>
