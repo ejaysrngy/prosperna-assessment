@@ -1,3 +1,4 @@
+// eslint-disable-next-line jsx-a11y/alt-text
 import React from "react";
 import "./IndividualItem.css";
 
@@ -9,7 +10,7 @@ export default function IndividualItem({
 }) {
   return (
     <div className="item-container">
-      <img src={itemImg} />
+      <img src={itemImg} alt={itemName}/>
       <div className="item-container__desc col-lg">
         <h5> {itemName} </h5>
         <h6>

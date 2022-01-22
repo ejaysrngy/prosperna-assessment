@@ -9,6 +9,7 @@ export default function App() {
       <Header />
       <Content />
       <Shop />
+      <Footer />
     </div>
     
     //   <ItemCards />

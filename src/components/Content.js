@@ -3,7 +3,7 @@ import "./Content.css";
 
 export default function Content() {
   return (
-    <div className="content">
+    <div className="content" id="content">
       <div className="landing-container">
         <img
           className="landing-container__phrase"
@@ -33,13 +33,13 @@ export default function Content() {
           </div>
         </div>
 
-        <div className="tagline-img col-4">
+        {/* <div className="tagline-img col-4">
           <img
             className="tagline-img__image"
             src="/images/solesavy-2tfHt0sfv3w-unsplash.jpg"
             alt="piles-of-shoes"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
