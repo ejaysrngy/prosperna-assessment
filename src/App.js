@@ -1,19 +1,19 @@
-import Header from "./components/Header";
-import Content from "./components/Content";
-import Shop from "./components/Shop";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainLanding from "./components/MainLanding";
+import Checkout from "./components/Checkout";
 import "./components/App.css"
+
+
 
 export default function App() {
   return (
-    <div>
-      <Header />
-      <Content />
-      <Shop />
-      <Footer />
-    </div>
+    <Router>
+    <Routes>
+      <Route path="/" element={<MainLanding />} />
+      <Route path="/checkout" element={<Checkout />} />
+    </Routes>
+    </Router>
+      
     
-    //   <ItemCards />
-    // <Footer /> */}
   );
 }
