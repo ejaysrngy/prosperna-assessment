@@ -1,9 +1,11 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import React from "react";
+import { useLocation } from "react-router-dom";
 import "./Checkout.css"
 
 export default function Checkout(){
+    
     return (
         <div>
             <Header />
