@@ -15,6 +15,8 @@ export default function App() {
     chosenImg: null,
   });
 
+  const [cart, setCart] = React.useState([]);
+
   return (
     <Router>
       <PayPalScriptProvider
@@ -25,7 +27,7 @@ export default function App() {
             "intent": "capture",
         }}
       >
-        <ItemContext.Provider value={{ chosenItem, setChosenItem }}>
+        <ItemContext.Provider value={{ chosenItem, setChosenItem, cart, setCart }}>
           <Routes>
             <Route path="/" element={<MainLanding />} />
             <Route path="/checkout" element={<Checkout />} />
