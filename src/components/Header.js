@@ -6,7 +6,7 @@ export default function Header() {
 
     return (
         <header>
-            <img className="logo" src="/images/sneakerfreak.png" alt="logo" />
+            <Link to="/"><img className="logo" src="/images/sneakerfreak.png" alt="logo" /> </Link>
             <nav>
                 <ul className="nav-list">
                     <li className="nav-list__item"> <Link to="/"> Home </Link> </li>
