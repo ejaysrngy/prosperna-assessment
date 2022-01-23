@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, {useContext} from "react";
+import { ItemContext } from "./ItemContext";
+
 import "./IndividualItem.css";
 
 export default function IndividualItem({
@@ -8,29 +10,26 @@ export default function IndividualItem({
   itemPrice,
   itemImg,
 }) {
-  // const [chosenItem, setChosenItem] = React.useState({
-  //   chosenName: null,
-  //   chosenColor: null,
-  //   chosenPrice: null,
-  //   chosenImg: null,
-  // });
 
-  // function onClickHandler() {
-  //   setChosenItem((prevState) => {
-  //     return {
-  //       ...prevState,
-  //       chosenColor: itemColor,
-  //       chosenName: itemName,
-  //       chosenPrice: itemPrice,
-  //       chosenImg: itemImg,
-  //     };
-  //   });
-  // }
+  const {chosenItem, setChosenItem} = React.useContext(ItemContext)
+
+  function onClickHandler() {
+    setChosenItem((prevState) => {
+      return {
+        ...prevState,
+        chosenColor: itemColor,
+        chosenName: itemName,
+        chosenPrice: itemPrice,
+        chosenImg: itemImg,
+      };
+    });
+  }
+  
 
   return (
-    <div className="item-container">
+    <div className="item-container col-lg">
       <img src={itemImg} alt={itemName} />
-      <div className="item-container__desc col-lg">
+      <div className="item-container__desc">
         <h6> {itemName} </h6>
         <h5>
           Php{" "}
@@ -41,16 +40,10 @@ export default function IndividualItem({
       <div className="item-container__buyNow">
         <Link
           to={{
-            pathname: "/checkout",
-            state: {
-              chosenColor: itemColor,
-              chosenName: itemName,
-              chosenPrice: itemPrice,
-              chosenImg: itemImg,
-            },
+            pathname: "/checkout"
           }}
         >
-          <button>Buy Now</button>
+          <button onClick={onClickHandler}>Buy Now</button>
         </Link>
       </div>
     </div>
