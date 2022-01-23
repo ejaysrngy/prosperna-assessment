@@ -1,8 +1,10 @@
 import React from "react";
 import "./Header.css"
 import { Link } from "react-router-dom";
+import { ItemContext } from "./ItemContext";
 
 export default function Header() {
+    const {cart} = React.useContext(ItemContext)
 
     return (
         <header>
@@ -13,7 +15,12 @@ export default function Header() {
                     <li className="nav-list__item"> <a href="#shop"> Shop </a> </li>
                 </ul>
             </nav>
-            <a className="contact" href="#contact"> <button> Contact </button></a>
+            <div className="shopping-cart"> 
+            <Link to="/checkout"> <img src="/images/shopping-cart.png" alt="cart"/> </Link>
+            <p> 
+            {cart.length}
+            </p>
+            </div>
         </header>
     )
 }
