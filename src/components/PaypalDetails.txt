@@ -1,0 +1,15 @@
+Sandbox account
+sb-pum7y12326159@business.example.com
+
+Client ID
+AQ3PPZeBFKfaZZIWTOoIcxqrktGCP4MOm8offosYPZwrU2wbe3Pc-2izj0b3Ggkjw8Y9idZ5KEHeoR9j
+
+First name: John
+Last name: Doe
+Email ID: sb-pum7y12326159@business.example.com
+System Generated Password: w,8!f@jZ
+
+First name: John
+Last name: Doe
+Email ID: sb-f0g43012326178@personal.example.com
+System Generated Password: et8LK=R4
