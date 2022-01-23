@@ -20,7 +20,6 @@ export default function Checkout() {
   }
 
   function onSubmitHandler(event){
-    event.preventDefault()
     setPaypalPayment(true);
   }
 
@@ -32,13 +31,13 @@ export default function Checkout() {
         <div className="shipping-container col-lg-8 col-md-12 row">
           <h1> Shipping Details </h1>
           <div className="shipping-container__details">
-            <form>
+            <form id="shipping-form" onSubmit={(event) => event.preventDefault()}>
               <label> First Name </label>
-              <input type="text" required/>
+              <input type="text" required />
               <label> Last Name </label>
               <input type="text" required/>
               <label> Email </label>
-              <input type="email" required/>
+              <input type="email" required />
               <label> Address Line 1 </label>
               <input type="text" required/>
               <label> Address Line 2 </label>
@@ -49,8 +48,7 @@ export default function Checkout() {
               <input type="text" required/>
               <label> Postal Code </label>
               <input type="number" required/>
-            </form>
-            <div className="shipping-container__button">
+              <div className="shipping-container__button">
               {paypalPayment ? (
                 <PayPalButtons
                   createOrder={(data, actions) => {
@@ -81,8 +79,9 @@ export default function Checkout() {
                 </button>
               )}
 
-              <button> Submit & Pay COD </button>
+              <button type="submit" onClick={(event) => event.preventDefault()}> Submit & Pay COD </button>
             </div>
+            </form>
           </div>
         </div>
         <div className="summary-container col-lg-4 col-md-6">
