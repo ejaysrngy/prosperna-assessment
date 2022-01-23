@@ -1,6 +1,8 @@
 import React from "react";
 import "./Content.css";
 
+
+
 export default function Content() {
   return (
     <div className="content" id="content">
@@ -33,13 +35,9 @@ export default function Content() {
           </div>
         </div>
 
-        {/* <div className="tagline-img col-4">
-          <img
-            className="tagline-img__image"
-            src="/images/solesavy-2tfHt0sfv3w-unsplash.jpg"
-            alt="piles-of-shoes"
-          />
-        </div> */}
+        <div className="swiper-container">
+        
+        </div>
       </div>
     </div>
   );
