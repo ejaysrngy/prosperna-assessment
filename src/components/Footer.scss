@@ -1,5 +1,7 @@
 .footer-logo h1 {
-    font-family:'Coda', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 900;
     color: rgb(61, 61, 61);
     padding-left: 30px;
 }
@@ -10,13 +12,15 @@
 }
 
 .footer-locations {
+    font-family: 'Poppins', sans-serif;
     margin: auto;
     width: 80%;
     color: rgb(139, 139, 139);
     text-align: center;
 
     h3 {
-        font-family: Oswald, sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
         font-size: 1.5vw;
     }
 

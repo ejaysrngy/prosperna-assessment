@@ -14,8 +14,15 @@
 }
 
 .item-container__desc {
+    font-family: 'Poppins', sans-serif;
     margin: 10px 0 0 0 ;
     text-align: left;
+
+    #item-color {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        color: rgb(158, 158, 158);
+    }
 }
 
 .item-container__buyNow {
