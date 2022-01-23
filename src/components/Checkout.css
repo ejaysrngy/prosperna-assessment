@@ -22,20 +22,47 @@
   padding: 15px;
 }
 
-.shipping-container__details h6 {
+.shipping-container__details label {
+  font-size: 1.5vw;
+  font-weight: 600;
+  width: 42%;
   display: inline-block;
 }
 
 .shipping-container__details input {
-  display: inline-block;
+  width: 50%;
+  margin-bottom: 25px;
 }
 
-.checkout-container {
+.shipping-container__button {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.shipping-container__button button {
+  font-size: 1.5vw;
+  margin-bottom: 10px;
+  border-style: none;
+  color: white;
+  background-color: #585858;
+  padding: 10px 30px;
+  border-radius: 20px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.shipping-container__button button:hover {
+  background-color: black;
+  color: white;
+}
+
+.summary-container {
   padding: 0;
   margin-bottom: 20px;
 }
 
-.checkout-container__item {
+.summary-container__item {
   width: 100%;
   margin: 14px auto 0 auto;
   border: 1px solid #dadada;

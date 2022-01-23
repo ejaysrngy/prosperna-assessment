@@ -1,3 +1,9 @@
+.footer-logo h1 {
+  font-family: 'Oswald', sans-serif;
+  color: gray;
+  padding-left: 30px;
+}
+
 .footer-container {
   padding: 2% 1.5%;
   background-color: black;
