@@ -1,6 +1,6 @@
 .footer-logo h1 {
-  font-family: 'Oswald', sans-serif;
-  color: gray;
+  font-family: 'Coda', cursive;
+  color: #3d3d3d;
   padding-left: 30px;
 }
 
@@ -12,7 +12,20 @@
 .footer-locations {
   margin: auto;
   width: 80%;
-  color: #dadada;
+  color: #8b8b8b;
   text-align: center;
+}
+
+.footer-locations h3 {
+  font-family: Oswald, sans-serif;
+  font-size: 1.5vw;
+}
+
+.footer-locations h5 {
+  font-size: 1vw;
+}
+
+.footer-locations p {
+  font-size: 1vw;
 }
 /*# sourceMappingURL=Footer.css.map */
