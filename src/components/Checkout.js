@@ -19,6 +19,11 @@ export default function Checkout() {
     }, 0);
   }
 
+  function onSubmitHandler(event){
+    event.preventDefault()
+    setPaypalPayment(true);
+  }
+
   return (
     <div>
       <Header />
@@ -29,21 +34,21 @@ export default function Checkout() {
           <div className="shipping-container__details">
             <form>
               <label> First Name </label>
-              <input type="text" />
+              <input type="text" required/>
               <label> Last Name </label>
-              <input type="text" />
+              <input type="text" required/>
               <label> Email </label>
-              <input type="email" />
+              <input type="email" required/>
               <label> Address Line 1 </label>
-              <input type="text" />
+              <input type="text" required/>
               <label> Address Line 2 </label>
               <input type="text" />
               <label> City </label>
-              <input type="text" />
+              <input type="text" required/>
               <label> Region/State </label>
-              <input type="text" />
+              <input type="text" required/>
               <label> Postal Code </label>
-              <input type="number" />
+              <input type="number" required/>
             </form>
             <div className="shipping-container__button">
               {paypalPayment ? (
@@ -68,10 +73,8 @@ export default function Checkout() {
                   }}
                 />
               ) : (
-                <button
-                  onClick={() => {
-                    setPaypalPayment(true);
-                  }}
+                <button type="submit"
+                  onClick={onSubmitHandler}
                 >
                   {" "}
                   Submit & Pay with Paypal{" "}
@@ -86,12 +89,12 @@ export default function Checkout() {
           <h1> Summary </h1>
           <div className="total-container row">
             <h5 className="col-6"> Total: </h5>
-            <h6 className="col-6">
-              {" "}
+            {checkoutPrice != null && <h6 className="col-6">
+
               Php {checkoutPrice.toLocaleString(undefined, {
                 minimumFractionDigits: 2,
-              })}{" "}
-            </h6>
+              })}
+            </h6>}
           </div>
           {cart.length === 0 ? (
             // If cart length is less than 0

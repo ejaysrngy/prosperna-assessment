@@ -13,6 +13,7 @@ export default function IndividualItem({
   const { setChosenItem, setCart } = React.useContext(ItemContext);
 
   function onClickHandler() {
+    setCart([])
     setChosenItem((prevState) => {
       return {
         ...prevState,
