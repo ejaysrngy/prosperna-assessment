@@ -43,3 +43,15 @@
     background-color: white;
     color: black;
 }
+
+.item-container__buyNow img {
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 0 !important;
+    width: 20px ;
+    transition: all 0.25s ease;
+}
+
+.item-container__buyNow img:hover {
+    transform: translate(0,-2px);
+}

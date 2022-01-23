@@ -63,4 +63,21 @@ header li, a, button {
 .contact button:hover {
   background-color: #111010;
 }
+
+.shopping-cart img {
+  position: absolute;
+  width: 19px;
+}
+
+.shopping-cart p {
+  border-radius: 10px;
+  font-size: 1.5vw;
+  padding: 2px 5px;
+  margin: 0;
+  position: relative;
+  color: white;
+  left: 15px;
+  top: -15px;
+  background-color: red;
+}
 /*# sourceMappingURL=Header.css.map */
