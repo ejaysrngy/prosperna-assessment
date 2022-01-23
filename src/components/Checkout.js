@@ -20,19 +20,21 @@ export default function Checkout() {
           <div className="shipping-container__details">
             <form>
               <label> First Name </label>
-              <input />
+              <input type="text"/>
               <label> Last Name </label>
-              <input />
+              <input type="text"/>
+              <label> Email </label>
+              <input type="email"/>
               <label> Address Line 1 </label>
-              <input />
+              <input type="text"/>
               <label> Address Line 2 </label>
-              <input />
+              <input type="text"/>
               <label> City </label>
-              <input />
+              <input type="text"/>
               <label> Region/State </label>
-              <input />
+              <input type="text"/>
               <label> Postal Code </label>
-              <input />
+              <input type="number" />
             </form>
             <div className="shipping-container__button">
               {paypalPayment ? (
