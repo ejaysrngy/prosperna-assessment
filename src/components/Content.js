@@ -19,7 +19,7 @@ export default function Content() {
         />
       </div>
       <div className="tagline-container row">
-        <div className="tagline col-lg-6 col-md-12">
+        <div className="tagline col-lg-12 col-md-12">
           <div className="best-kicks">
             Only the best kicks, for the best version of you.
           </div>
