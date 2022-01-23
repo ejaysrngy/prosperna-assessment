@@ -30,6 +30,7 @@
 }
 
 .item-container__buyNow button {
+  font-size: 1vw;
   margin-bottom: 10px;
   border-style: none;
   color: white;
