@@ -6,9 +6,18 @@ import { PayPalButtons } from "@paypal/react-paypal-js";
 import "./Checkout.css";
 
 export default function Checkout() {
-  const { chosenItem } = React.useContext(ItemContext);
+  const { cart, chosenItem } = React.useContext(ItemContext);
   const { chosenName, chosenColor, chosenPrice, chosenImg } = chosenItem;
   const [paypalPayment, setPaypalPayment] = React.useState(false);
+
+  let checkoutPrice
+  if (cart.length === 0){
+    checkoutPrice = chosenPrice;
+  } else {
+    checkoutPrice = cart.reduce((total, curr) => {
+      return total + curr.chosenPrice 
+    }, 0)
+  }
 
   return (
     <div>
@@ -44,7 +53,7 @@ export default function Checkout() {
                         {
                             description: chosenName,
                             amount: {
-                                value: chosenPrice,
+                                value: checkoutPrice,
                             }
                         }
                     ]
@@ -74,11 +83,13 @@ export default function Checkout() {
         </div>
         <div className="summary-container col-lg-4 col-md-6">
           <h1> Summary </h1>
+          {cart.length === 0 ? 
+          // If cart length is less than 0
           <div className="summary-container__item row">
             <div className="item-img col-4">
               {chosenImg != null ? <img src={chosenImg} alt="shoe" /> : null}
             </div>
-            <div className="item-desc col-5">
+            <div className="item-desc col">
               <h3> {chosenName} </h3>
               <h6> {chosenColor} </h6>
               {chosenPrice != null && (
@@ -90,13 +101,27 @@ export default function Checkout() {
                 </p>
               )}
             </div>
-            {/* ^^ item-desc */}
-          </div>
-          {/* ^^ checkout-container__item */}
+            </div> : 
+            // if cart length is greater than 0
+            (cart.map((item, index) => (<div key={index} className="summary-container__item row">
+            <div className="item-img col-4">
+              {item.chosenImg != null ? <img src={item.chosenImg} alt="shoe" /> : null}
+            </div>
+            <div className="item-desc col">
+              <h3> {item.chosenName} </h3>
+              <h6> {item.chosenColor} </h6>
+              {item.chosenPrice != null && (
+                <p>
+                  Php{" "}
+                  {item.chosenPrice.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                  })}{" "}
+                </p>
+              )}
+            </div>
+          </div>)))}
         </div>
-        {/* ^^ checkout-container */}
       </div>
-      {/* ^^ row */}
 
       <Footer />
     </div>
