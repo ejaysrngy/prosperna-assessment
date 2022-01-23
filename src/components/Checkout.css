@@ -10,6 +10,10 @@
   font-size: 1.5vw;
 }
 
+#checkout-text {
+  text-align: center;
+}
+
 .shipping-container {
   margin: 0 auto 0 auto;
 }

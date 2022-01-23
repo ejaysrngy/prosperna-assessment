@@ -14,7 +14,7 @@ export default function Checkout() {
     <div>
       <Header />
       <div className="checkout-page row">
-        <h1> Checkout </h1>
+        <h1 id="checkout-text"> Checkout </h1>
         <div className="shipping-container col-lg-8 col-md-12 row">
           <h1> Shipping Details </h1>
           <div className="shipping-container__details">
