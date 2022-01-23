@@ -9,7 +9,7 @@ export default function Header() {
             <img className="logo" src="/images/sneakerfreak.png" alt="logo" />
             <nav>
                 <ul className="nav-list">
-                    <li className="nav-list__item"> <a href="#landing"> Home </a> </li>
+                    <li className="nav-list__item"> <Link to="/"> Home </Link> </li>
                     <li className="nav-list__item"> <a href="#shop"> Shop </a> </li>
                 </ul>
             </nav>
