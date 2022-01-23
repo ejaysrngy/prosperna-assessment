@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, {useContext} from "react";
+import React from "react";
 import { ItemContext } from "./ItemContext";
 
 import "./IndividualItem.css";
@@ -11,7 +11,7 @@ export default function IndividualItem({
   itemImg,
 }) {
 
-  const {chosenItem, setChosenItem} = React.useContext(ItemContext)
+  const {setChosenItem} = React.useContext(ItemContext)
 
   function onClickHandler() {
     setChosenItem((prevState) => {

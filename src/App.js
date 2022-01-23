@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLanding from "./components/MainLanding";
 import Checkout from "./components/Checkout";
-import React, { useContext } from "react";
+import React from "react";
 import { ItemContext } from "./components/ItemContext";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
