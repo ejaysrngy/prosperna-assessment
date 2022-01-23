@@ -10,7 +10,7 @@ export default function IndividualItem({
   itemPrice,
   itemImg,
 }) {
-  const { chosenItem, setChosenItem, setCart } = React.useContext(ItemContext);
+  const { setChosenItem, setCart } = React.useContext(ItemContext);
 
   function onClickHandler() {
     setChosenItem((prevState) => {
