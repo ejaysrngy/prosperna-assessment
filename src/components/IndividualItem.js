@@ -10,8 +10,7 @@ export default function IndividualItem({
   itemPrice,
   itemImg,
 }) {
-
-  const {setChosenItem} = React.useContext(ItemContext)
+  const { chosenItem, setChosenItem, setCart } = React.useContext(ItemContext);
 
   function onClickHandler() {
     setChosenItem((prevState) => {
@@ -24,7 +23,20 @@ export default function IndividualItem({
       };
     });
   }
-  
+
+  function addToCartHandler() {
+    setCart((prevCart) => {
+      return [
+        ...prevCart,
+        {
+          chosenColor: itemColor,
+          chosenName: itemName,
+          chosenPrice: itemPrice,
+          chosenImg: itemImg,
+        },
+      ];
+    });
+  }
 
   return (
     <div className="item-container col-lg">
@@ -38,9 +50,14 @@ export default function IndividualItem({
         <h6 id="item-color">{itemColor}</h6>
       </div>
       <div className="item-container__buyNow">
+        <img
+          onClick={addToCartHandler}
+          src="/images/shopping-cart-add(1).png"
+          alt="cart"
+        />
         <Link
           to={{
-            pathname: "/checkout"
+            pathname: "/checkout",
           }}
         >
           <button onClick={onClickHandler}>Buy Now</button>
