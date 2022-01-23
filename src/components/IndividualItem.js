@@ -35,7 +35,7 @@ export default function IndividualItem({
           Php{" "}
           {itemPrice.toLocaleString(undefined, { minimumFractionDigits: 2 })}
         </h5>
-        <h6>{itemColor}</h6>
+        <h6 id="item-color">{itemColor}</h6>
       </div>
       <div className="item-container__buyNow">
         <Link
