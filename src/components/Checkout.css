@@ -93,4 +93,22 @@
   margin-bottom: 0;
   font-weight: 700;
 }
+
+.total-container {
+  padding: 15px;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  width: auto;
+  margin: auto;
+}
+
+.total-container h5 {
+  width: auto;
+  margin: auto;
+}
+
+.total-container h6 {
+  width: auto;
+  margin: auto;
+}
 /*# sourceMappingURL=Checkout.css.map */
