@@ -9,9 +9,9 @@ import "./components/App.css";
 
 export default function App() {
   const [chosenItem, setChosenItem] = React.useState({
-    chosenName: null,
-    chosenColor: null,
-    chosenPrice: null,
+    chosenName: "",
+    chosenColor: "",
+    chosenPrice: 0,
     chosenImg: null,
   });
 
