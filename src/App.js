@@ -12,7 +12,7 @@ export default function App() {
     chosenName: "",
     chosenColor: "",
     chosenPrice: 0,
-    chosenImg: null,
+    chosenImg: "",
   });
 
   const [cart, setCart] = React.useState([]);
