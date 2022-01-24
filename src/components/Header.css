@@ -34,6 +34,7 @@ header li, a, button {
 .nav-list {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .nav-list li {
