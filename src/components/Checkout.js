@@ -99,12 +99,12 @@ export default function Checkout() {
             // If cart length is less than 0
             <div className="summary-container__item row">
               <div className="item-img col-4">
-                {chosenImg != null ? <img src={chosenImg} alt="shoe" /> : null}
+                {chosenImg !== "" ? <img src={chosenImg} alt="shoe" /> : null}
               </div>
               <div className="item-desc col">
                 <h3> {chosenName} </h3>
                 <h6> {chosenColor} </h6>
-                {chosenPrice != null && (
+                {chosenPrice !== 0 && (
                   <p>
                     Php{" "}
                     {chosenPrice.toLocaleString(undefined, {
@@ -119,14 +119,14 @@ export default function Checkout() {
             cart.map((item, index) => (
               <div key={index} className="summary-container__item row">
                 <div className="item-img col-4">
-                  {item.chosenImg != null ? (
+                  {item.chosenImg !== "" ? (
                     <img src={item.chosenImg} alt="shoe" />
                   ) : null}
                 </div>
                 <div className="item-desc col">
                   <h3> {item.chosenName} </h3>
                   <h6> {item.chosenColor} </h6>
-                  {item.chosenPrice != null && (
+                  {item.chosenPrice !== 0 && (
                     <p>
                       Php{" "}
                       {item.chosenPrice.toLocaleString(undefined, {
