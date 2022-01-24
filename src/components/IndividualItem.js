@@ -14,14 +14,11 @@ export default function IndividualItem({
 
   function onClickHandler() {
     setCart([])
-    setChosenItem((prevState) => {
-      return {
-        ...prevState,
+    setChosenItem({
         chosenColor: itemColor,
         chosenName: itemName,
         chosenPrice: itemPrice,
         chosenImg: itemImg,
-      };
     });
   }
 
