@@ -4,13 +4,17 @@
     max-width: 310px;
     padding-top: 10px;
     margin: 2%;
+    width: 30%;
+    height: auto;
 }
 
 .item-container img {
     position: relative;
-    left: -5px;
-    width: 296px;
-    border-radius: 20px;
+    left: 0px;
+    max-width: 296px;
+    border-radius: 3%;
+    width: 100%;
+    height: auto;
 }
 
 .item-container__desc {
@@ -22,6 +26,14 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
         color: rgb(158, 158, 158);
+    }
+
+    h5 {
+        font-size: 1.25vw;
+    }
+
+    h6 {
+        font-size: 1.1vw;
     }
 }
 
