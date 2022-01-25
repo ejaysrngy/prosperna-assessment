@@ -13,3 +13,29 @@ First name: John
 Last name: Doe
 Email ID: sb-f0g43012326178@personal.example.com
 System Generated Password: et8LK=R4
+
+// {
+//   "products" : [
+//     {
+//       "productID": "0001",
+//       "name": "Nike Air Force 1",
+//       "color": "White",
+//       "price": 4795.0,
+//       "img": "/images/air-force-1-07-shoe-NMmm1B.jpg"
+//     },
+//     {
+//       "productID": "0002",
+//       "name": "Jordan 1 Shattered Backboard Low",
+//       "color": "Orange/Black/White",
+//       "price": 8195.0,
+//       "img": "/images/Jordan_1_SBB_low-1_2000x.jpg"
+//     },
+//     {
+//       "productID": "0003",
+//       "name": "Off White Jordan 1 Retro High",
+//       "color": "Off-White University Blue",
+//       "price": 8195.0,
+//       "img": "/images/offwhite.jpg"
+//     }
+//   ]
+// }

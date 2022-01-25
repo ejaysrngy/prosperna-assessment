@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLanding from "./components/MainLanding";
-import Checkout from "./components/Checkout";
+import Checkout from "./components/Checkout/Checkout";
 import React from "react";
-import { ItemContext } from "./components/ItemContext";
+import { ItemContext } from "../src/components/ItemContext";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 import "./components/App.css";
 
@@ -28,10 +30,12 @@ export default function App() {
         }}
       >
         <ItemContext.Provider value={{ chosenItem, setChosenItem, cart, setCart }}>
+        <Header />
           <Routes>
             <Route path="/" element={<MainLanding />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
+        <Footer />
         </ItemContext.Provider>
       </PayPalScriptProvider>
     </Router>

@@ -1,6 +1,6 @@
 import React from "react";
-import IndividualItem from "./IndividualItem";
-import ITEMS from "../assets/items.json";
+import IndividualItem from "../IndividualItem/IndividualItem";
+import ITEMS from "../../assets/items.json";
 import "./Shop.css";
 
 // create products with product ID; refer to JSON file
@@ -36,16 +36,17 @@ export default function Shop() {
         <h1>Shop</h1>
       </div>
     </div>
-    <div className="shop-items row">
+    <div className="shop-items flex row">
         {/* map ITEMS to individual items */}
         {ITEMS.map((item, index) => {
           return (
             <IndividualItem
               key={index}
-              itemName={item.name}
-              itemColor={item.color}
-              itemPrice={item.price}
-              itemImg={item.img}
+              item={item}
+              // itemName={item.name}
+              // itemColor={item.color}
+              // itemPrice={item.price}
+              // itemImg={item.img}
             />
           );
         })}

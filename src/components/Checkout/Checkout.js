@@ -1,7 +1,7 @@
-import Header from "./Header";
-import Footer from "./Footer";
+// import Header from "../Header/Header";
+// import Footer from "../Footer/Footer";
 import React from "react";
-import { ItemContext } from "./ItemContext";
+import { ItemContext } from "../ItemContext";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import "./Checkout.css";
 
@@ -25,7 +25,7 @@ export default function Checkout() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="checkout-page row">
         <h1 id="checkout-text"> Checkout </h1>
         <div className="shipping-container col-lg-8 col-md-12 row">
@@ -141,7 +141,7 @@ export default function Checkout() {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

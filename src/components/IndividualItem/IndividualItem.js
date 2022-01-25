@@ -1,18 +1,14 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { ItemContext } from "./ItemContext";
+import { ItemContext } from "../ItemContext";
 
 import "./IndividualItem.css";
 
-export default function IndividualItem({
-  itemName,
-  itemColor,
-  itemPrice,
-  itemImg,
-}) {
+export default function IndividualItem({item}) {
+  const {name: itemName, color: itemColor, price: itemPrice, img: itemImg} = item
   const { setChosenItem, setCart } = React.useContext(ItemContext);
 
-  function onClickHandler() {
+  const onClickHandler = () => {
     setCart([])
     setChosenItem({
         chosenColor: itemColor,
@@ -22,7 +18,7 @@ export default function IndividualItem({
     });
   }
 
-  function addToCartHandler() {
+  const addToCartHandler = () => {
     setCart((prevCart) => {
       return [
         ...prevCart,
@@ -37,7 +33,7 @@ export default function IndividualItem({
   }
 
   return (
-    <div className="item-container col-lg">
+    <div className="item-container col-xl">
       <img src={itemImg} alt={itemName} />
       <div className="item-container__desc">
         <h6> {itemName} </h6>
