@@ -19,7 +19,7 @@ export default function Checkout() {
     }, 0);
   }
 
-  function onSubmitHandler(event){
+  const onSubmitHandler = (event) => {
     setPaypalPayment(true);
   }
 
