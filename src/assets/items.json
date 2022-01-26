@@ -1,5 +1,5 @@
-[
-    {
+{
+ "products":[   {
       "productID": "0001",
       "name": "Nike Air Force 1",
       "color": "White",
@@ -21,5 +21,6 @@
       "img": "/images/offwhite.jpg"
     }
   ]
+  }
 
 

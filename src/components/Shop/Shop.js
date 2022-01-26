@@ -38,7 +38,7 @@ export default function Shop() {
     </div>
     <div className="shop-items flex row">
         {/* map ITEMS to individual items */}
-        {ITEMS.map((item, index) => {
+        {ITEMS["products"].map((item, index) => {
           return (
             <IndividualItem
               key={index}
