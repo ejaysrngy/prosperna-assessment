@@ -12,6 +12,9 @@
 }
 
 .shop-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: auto;
   padding: 0 2%;
 }
