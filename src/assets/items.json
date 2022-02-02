@@ -19,6 +19,20 @@
       "color": "Off-White University Blue",
       "price": 8195.0,
       "img": "/images/offwhite.jpg"
+    },
+    {
+      "productID": "0003",
+      "name": "Off White Jordan 1 Retro High",
+      "color": "Off-White University Blue",
+      "price": 8195.0,
+      "img": "/images/offwhite.jpg"
+    },
+    {
+      "productID": "0003",
+      "name": "Off White Jordan 1 Retro High",
+      "color": "Off-White University Blue",
+      "price": 8195.0,
+      "img": "/images/offwhite.jpg"
     }
   ]
   }
