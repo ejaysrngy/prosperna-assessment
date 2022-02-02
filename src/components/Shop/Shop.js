@@ -1,6 +1,8 @@
 import React from "react";
 import IndividualItem from "../IndividualItem/IndividualItem";
 import ITEMS from "../../assets/items.json";
+import {Swiper, SwiperSlide} from "swiper/react"
+import "swiper/css"
 import "./Shop.css";
 
 // create products with product ID; refer to JSON file
@@ -36,20 +38,26 @@ export default function Shop() {
         <h1>Shop</h1>
       </div>
     </div>
-    <div className="shop-items flex row">
+    <div className="shop-items row">
         {/* map ITEMS to individual items */}
+        <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+    >
         {ITEMS["products"].map((item, index) => {
           return (
+            <SwiperSlide style={{width: "auto"}}key={index}>
             <IndividualItem
-              key={index}
               item={item}
               // itemName={item.name}
               // itemColor={item.color}
               // itemPrice={item.price}
               // itemImg={item.img}
             />
+            </SwiperSlide>
           );
         })}
+        </Swiper>
       </div>
     </div>
   );
