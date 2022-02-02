@@ -4,7 +4,7 @@
     max-width: 310px;
     padding-top: 10px;
     margin: 2% auto 3% auto;
-    width: 30%;
+    width: 100%;
     height: auto;
 }
 
@@ -19,7 +19,7 @@
 
 .item-container__desc {
     font-family: 'Poppins', sans-serif;
-    margin: 10px 0 0 0 ;
+    margin: 10px 0 0 10px ;
     text-align: left;
 
     #item-color {
@@ -29,16 +29,18 @@
     }
 
     h5 {
-        font-size: 1.25vw;
+        font-size: 1.5vw;
+        font-weight: 600;
     }
 
     h6 {
-        font-size: 1.1vw;
+        font-size: 1.25vw;
     }
 }
 
 .item-container__buyNow {
     text-align: right;
+    margin-right: 5%;
 }
 
 .item-container__buyNow button {
