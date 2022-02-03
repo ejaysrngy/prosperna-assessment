@@ -3,6 +3,7 @@ import Content from "../components/Content/Content";
 import Shop from "../components/Shop/Shop";
 // import Footer from "../components/Footer/Footer";
 import Banner from "../components/Banner/Banner";
+import ItemPopUp from "../components/ItemPopUp/ItemPopUp"
 import React from "react";
 
 export default function MainLanding() {
@@ -12,6 +13,7 @@ export default function MainLanding() {
         {/* <Header /> */}
         <Content />
         <Shop />
+        <ItemPopUp />
         <Banner />
         {/* <Footer /> */}
     </div>
