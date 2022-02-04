@@ -37,4 +37,11 @@
     border: 1px rgb(148, 148, 148) solid;
     margin: 0 1px;
     background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.shoesize-button:hover {
+    color: white;
+    background-color: #6d6d6d;
 }

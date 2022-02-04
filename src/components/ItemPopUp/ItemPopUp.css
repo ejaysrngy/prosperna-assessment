@@ -37,5 +37,13 @@
   border: 1px #949494 solid;
   margin: 0 1px;
   background-color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.shoesize-button:hover {
+  color: white;
+  background-color: #6d6d6d;
 }
 /*# sourceMappingURL=ItemPopUp.css.map */
