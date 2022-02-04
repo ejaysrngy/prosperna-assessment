@@ -8,7 +8,7 @@ export default function ItemPopUp(){
     const {products} = ITEMS
     return (
         <div className="item-popup">
-            <div className="item-popup__indivitem row">
+            <div className="item-popup__indivitem container-flex row">
                 <div className="item-popup__image col-6">
                     <img src={products[0].img} alt="item-img" />
                 </div>
@@ -18,7 +18,7 @@ export default function ItemPopUp(){
                     <div className="item-popup__sizes">
                         {SHOE_SIZES.map((currItem, index) => {
                             return (
-                                <button className="shoesize-button"> {currItem} </button>
+                                <button key={index} className="shoesize-button"> {currItem} </button>
                             )
                         })}
                     </div>
