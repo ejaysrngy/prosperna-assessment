@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer(){
     return (
-        <div className="footer-container">
+        <footer className="footer-container">
             <div className="footer-logo">
                 <h1> Sneaker Freak </h1>
             </div>
@@ -22,6 +22,6 @@ export default function Footer(){
                     <p> Conrad Hotel MOA Complex, Manila, Metro Manila</p>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
