@@ -30,18 +30,46 @@
 
 .shoesize-button {
     font-family: 'Poppins', sans-serif;
+    padding: 1px 10px;
     font-style: italic;
     font-size: 12px;
     color: black;
     width: 50px;
-    border: 1px rgb(148, 148, 148) solid;
-    margin: 0 1px;
+    border: 1px rgb(214, 214, 214) solid;
+    border-radius: 3px;
+    margin: 0 5px 5px 5px;
     background-color: white;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
 .shoesize-button:hover {
+    border: 1px solid rgb(0, 0, 0)
+}
+
+.shoesize-button:active {
     color: white;
-    background-color: #6d6d6d;
+    background-color: #000000;
+}
+
+.item-popup__quantity {
+    font-style: italic;
+    margin-top: 25px;
+    text-align: center;
+
+    .quantity {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+
+    button {
+        min-width: 31px;
+        font-size: 15px;
+        padding: 0 10px;
+        display: inline;
+        border-style: none;
+        background-color: black;
+        color: white;
+    }
 }
