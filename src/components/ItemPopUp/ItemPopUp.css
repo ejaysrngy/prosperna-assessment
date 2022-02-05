@@ -6,7 +6,7 @@
 }
 
 .item-popup__indivitem {
-  width: 100%;
+  width: auto;
   margin: 0 auto 0 auto;
 }
 
@@ -15,7 +15,8 @@
 }
 
 .item-popup__image img {
-  width: 60%;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -28,20 +29,35 @@
   text-align: left;
 }
 
+.item-popup__desc h6 {
+  color: gray;
+  font-weight: 400;
+}
+
+.item-popup__sizes p {
+  margin: 0;
+  font-size: 12px;
+}
+
 .shoesize-button {
-  font-family: 'Poppins', sans-serif;
-  padding: 1px 10px;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
   font-style: italic;
   font-size: 12px;
   color: black;
-  width: 50px;
+  width: 75px;
   border: 1px #d6d6d6 solid;
   border-radius: 3px;
-  margin: 0 5px 5px 5px;
+  margin: 0 5px 5px 0;
   background-color: white;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.shoesize-button p {
+  text-align: center;
+  margin: 10px;
 }
 
 .shoesize-button:hover {
@@ -54,17 +70,19 @@
 }
 
 .item-popup__quantity {
-  font-style: italic;
   margin-top: 25px;
-  text-align: center;
+  text-align: right;
 }
 
 .item-popup__quantity .quantity {
   display: inline-block;
   padding: 0 10px;
+  font-style: italic;
+  font-weight: 700;
 }
 
 .item-popup__quantity button {
+  border-radius: 5px;
   min-width: 31px;
   font-size: 15px;
   padding: 0 10px;
@@ -72,5 +90,16 @@
   border-style: none;
   background-color: black;
   color: white;
+}
+
+.item-popup__quantity h4 {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.item-popup__quantity h6 {
+  color: black;
+  display: inline-block;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=ItemPopUp.css.map */
