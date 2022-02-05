@@ -10,20 +10,16 @@ export default function ItemPopUp() {
   const { products } = ITEMS;
   return (
     <div className="item-popup">
-      <div className="item-popup__indivitem container-flex row">
-        <div className="item-popup__image col-6">
+      <div className="item-popup__indivitem row">
+        <div className="item-popup__image col">
           <img src={products[0].img} alt="item-img" />
         </div>
-        <div className="item-popup__desc col-4">
-          <h1> {products[0].name} </h1>
-          <h4>
-            {" "}
-            Php{" "}
-            {products[0].price.toLocaleString(undefined, {
-              minimumFractionDigits: 2,
-            })}{" "}
-          </h4>
+        <div className="item-popup__desc col">
+          <h2> {products[0].name} </h2>
+          <h6> {products[0].color} </h6>
+          <p> {products[0].description} </p>
           <div className="item-popup__sizes">
+          <p> Select size </p>
             {SHOE_SIZES.map((currItem, index) => {
               return (
                 <button
@@ -31,15 +27,25 @@ export default function ItemPopUp() {
                   className="shoesize-button"
                 >
 
-                  {currItem}
+                  <p>US {currItem}</p>
                 </button>
               );
             })}
           </div>
           <div className="item-popup__quantity">
-            <button onClick={() => setQuantity(quantity-1)}> - </button>
+            <h6>Quantity: </h6> 
+            <button onClick={() => {if (quantity === 0) {
+              //pass
+            } else {
+              setQuantity(quantity-1)
+            }}}> - </button>
             <div className="quantity">{quantity} </div>
             <button onClick={() => setQuantity(quantity+1)}> + </button>
+            <h4>
+            Php {(products[0].price * quantity).toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+            })}
+          </h4>
           </div>
         </div>
       </div>
