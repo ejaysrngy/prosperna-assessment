@@ -5,7 +5,7 @@ import { ItemContext } from "../ItemContext";
 import "./IndividualItem.css";
 
 export default function IndividualItem({item}) {
-  const {name: itemName, color: itemColor, price: itemPrice, img: itemImg} = item
+  const {name: itemName, color: itemColor, price: itemPrice, img: itemImg, description: itemDesc} = item
   const { setChosenItem, setCart } = React.useContext(ItemContext);
 
   const onClickHandler = () => {
@@ -15,19 +15,20 @@ export default function IndividualItem({item}) {
         chosenName: itemName,
         chosenPrice: itemPrice,
         chosenImg: itemImg,
+        chosenDesc: itemDesc,
     });
   }
 
   const addToCartHandler = () => {
     setCart((prevCart) => {
       return [
-        ...prevCart,
         {
           chosenColor: itemColor,
           chosenName: itemName,
           chosenPrice: itemPrice,
           chosenImg: itemImg,
-        },
+          chosenDesc: itemDesc,
+        }, ...prevCart
       ];
     });
   }
