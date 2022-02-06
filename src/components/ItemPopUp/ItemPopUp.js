@@ -1,23 +1,24 @@
 import React from "react";
 import ITEMS from "../../assets/items.json";
 import "./ItemPopUp.css";
+import { ItemContext } from "../ItemContext";
 
 export default function ItemPopUp() {
   const SHOE_SIZES = [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5];
   const [quantity, setQuantity] = React.useState(1);
+  const {cart} = React.useContext(ItemContext)
+  const {chosenName: name, chosenColor: color, chosenDesc: description, chosenPrice: price, chosenImg: img} = cart[0];
 
-
-  const { products } = ITEMS;
   return (
     <div className="item-popup">
       <div className="item-popup__indivitem row">
         <div className="item-popup__image col">
-          <img src={products[0].img} alt="item-img" />
+          <img src={img} alt="item-img" />
         </div>
         <div className="item-popup__desc col">
-          <h2> {products[0].name} </h2>
-          <h6> {products[0].color} </h6>
-          <p> {products[0].description} </p>
+          <h2> {name} </h2>
+          <h6> {color} </h6>
+          <p> {description} </p>
           <div className="item-popup__sizes">
           <p> Select size </p>
             {SHOE_SIZES.map((currItem, index) => {
@@ -38,7 +39,7 @@ export default function ItemPopUp() {
             <div className="quantity">{quantity} </div>
             <button onClick={() => setQuantity(quantity+1)}> + </button>
             <h4>
-            Php {(products[0].price * quantity).toLocaleString(undefined, {
+            Php {(price * quantity).toLocaleString(undefined, {
               minimumFractionDigits: 2,
             })}
           </h4>
