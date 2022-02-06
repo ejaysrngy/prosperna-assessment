@@ -1,5 +1,4 @@
 import React from "react";
-import ITEMS from "../../assets/items.json";
 import "./ItemPopUp.css";
 import { ItemContext } from "../ItemContext";
 
