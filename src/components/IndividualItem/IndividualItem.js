@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import ReactDOM from "react-dom";
+import ItemPopUp from "../ItemPopUp/ItemPopUp";
 import { ItemContext } from "../ItemContext";
 
 import "./IndividualItem.css";
@@ -7,6 +9,7 @@ import "./IndividualItem.css";
 export default function IndividualItem({item}) {
   const {name: itemName, color: itemColor, price: itemPrice, img: itemImg, description: itemDesc} = item
   const { setChosenItem, setCart } = React.useContext(ItemContext);
+  const [showItemPopUp, setShowItemPopUp] = React.useState(false);
 
   const onClickHandler = () => {
     setCart([])
@@ -31,6 +34,7 @@ export default function IndividualItem({item}) {
         }, ...prevCart
       ];
     });
+    setShowItemPopUp(true)
   }
 
   return (
@@ -50,6 +54,7 @@ export default function IndividualItem({item}) {
           src="/images/shopping-cart-add(1).png"
           alt="cart"
         />
+        {showItemPopUp && ReactDOM.createPortal(<ItemPopUp />, document.getElementById("modal"))}
         <Link
           to={{
             pathname: "/checkout",
