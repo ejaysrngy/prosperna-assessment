@@ -16,7 +16,7 @@ export default function MainLanding() {
         {/* <Header /> */}
         <Content />
         <Shop />
-        {cart.length > 0 && <ItemPopUp />}
+        {/* {cart.length > 0 && <ItemPopUp />} */}
         <Banner />
         {/* <Footer /> */}
     </div>
