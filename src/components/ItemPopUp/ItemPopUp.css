@@ -1,8 +1,15 @@
 .item-popup {
+  position: absolute;
+  z-index: 10;
   width: 90%;
   border: 1px solid black;
   margin: 10px auto;
   padding: 1% 1%;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .item-popup__indivitem {
@@ -101,5 +108,37 @@
   color: black;
   display: inline-block;
   margin-right: 10px;
+}
+
+.checkout-continue {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.checkout-continue button {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  border-style: none;
+  background-color: black;
+  margin: 5px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+
+.checkout-continue #checkout {
+  background-color: #3b3b3b;
+}
+
+.checkout-continue #checkout:hover {
+  background-color: white;
+  color: #000000;
+}
+
+.checkout-continue #cart:hover {
+  background-color: white;
+  color: #000000;
 }
 /*# sourceMappingURL=ItemPopUp.css.map */

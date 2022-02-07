@@ -1,8 +1,14 @@
 .item-popup {
+  position: absolute;
+  z-index: 10;
   width: 90%;
   border: 1px solid black;
   margin: 10px auto;
   padding: 1% 1%;
+  background-color: #fff;;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .item-popup__indivitem {
@@ -104,5 +110,37 @@
     color: black;
     display: inline-block;
     margin-right: 10px;
+  }
+}
+
+.checkout-continue {
+  margin-top: 25px;
+  text-align: center;
+
+  button {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    // font-style: italic;
+    border-style: none;
+    background-color: black;
+    margin: 5px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: all ease 0.25s;
+  }
+
+  #checkout {
+    background-color: rgb(59, 59, 59);
+  }
+
+  #checkout:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+  }
+
+  #cart:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
   }
 }
