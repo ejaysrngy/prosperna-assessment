@@ -43,6 +43,10 @@ export default function ItemPopUp() {
             })}
           </h4>
           </div>
+          <div className="checkout-continue">
+            <button id="checkout" className="checkout-continue__button"> CONTINUE TO CHECKOUT </button>
+            <button id="cart" className="checkout-continue__button"> Add to cart </button>
+          </div>
         </div>
       </div>
     </div>
