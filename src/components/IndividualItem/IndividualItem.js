@@ -8,7 +8,7 @@ import "./IndividualItem.css";
 
 export default function IndividualItem({item}) {
   const {name: itemName, color: itemColor, price: itemPrice, img: itemImg, description: itemDesc} = item
-  const { setChosenItem, setCart } = React.useContext(ItemContext);
+  const { cart, setChosenItem, setCart } = React.useContext(ItemContext);
   const [showItemPopUp, setShowItemPopUp] = React.useState(false);
 
   const onClickHandler = () => {
@@ -54,7 +54,7 @@ export default function IndividualItem({item}) {
           src="/images/shopping-cart-add(1).png"
           alt="cart"
         />
-        {showItemPopUp && ReactDOM.createPortal(<ItemPopUp />, document.getElementById("modal"))}
+        {showItemPopUp && ReactDOM.createPortal(<ItemPopUp item={cart[0]}/>, document.getElementById("modal"))}
         <Link
           to={{
             pathname: "/checkout",
