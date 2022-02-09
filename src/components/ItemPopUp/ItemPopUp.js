@@ -2,11 +2,11 @@ import React from "react";
 import "./ItemPopUp.css";
 import { ItemContext } from "../ItemContext";
 
-export default function ItemPopUp() {
+export default function ItemPopUp({item}) {
   const SHOE_SIZES = [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5];
   const [quantity, setQuantity] = React.useState(1);
-  const {cart} = React.useContext(ItemContext)
-  const {chosenName: name, chosenColor: color, chosenDesc: description, chosenPrice: price, chosenImg: img} = cart[0];
+  // const {cart} = React.useContext(ItemContext)
+  const {chosenName: name, chosenColor: color, chosenDesc: description, chosenPrice: price, chosenImg: img} = item;
 
   return (
     <div className="item-popup">
