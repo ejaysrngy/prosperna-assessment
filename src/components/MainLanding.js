@@ -3,7 +3,7 @@ import Content from "../components/Content/Content";
 import Shop from "../components/Shop/Shop";
 // import Footer from "../components/Footer/Footer";
 import Banner from "../components/Banner/Banner";
-import ItemPopUp from "./ItemPopUp/ItemPopUp";
+// import ItemPopUp from "./ItemPopUp/ItemPopUp";
 import { ItemContext } from "./ItemContext";
 import React from "react";
 
