@@ -5,7 +5,7 @@ import { PayPalButtons } from "@paypal/react-paypal-js";
 import "./Checkout.css";
 
 export default function Checkout() {
-  const { cart, chosenItem } = React.useContext(ItemContext);
+  const { cart, chosenItem, setCart } = React.useContext(ItemContext);
   const { chosenName, chosenColor, chosenPrice, chosenImg } = chosenItem;
   const [paypalPayment, setPaypalPayment] = React.useState(false);
 
@@ -20,6 +20,12 @@ export default function Checkout() {
 
   const onSubmitHandler = (event) => {
     setPaypalPayment(true);
+  }
+
+  const deleteItem = (shoeNum) => {
+    setCart(cart.filter((currItem, index) => {
+      return shoeNum !== index
+    }))
   }
 
   return (
@@ -133,6 +139,9 @@ export default function Checkout() {
                       })}{" "}
                     </p>
                   )}
+                </div>
+                <div className="remove-item col-1">
+                      <p onClick={() => deleteItem(index)}> X </p>
                 </div>
               </div>
             ))
