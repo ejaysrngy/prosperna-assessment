@@ -111,4 +111,9 @@
   width: auto;
   margin: auto;
 }
+
+.remove-item {
+  font-weight: 700;
+  cursor: pointer;
+}
 /*# sourceMappingURL=Checkout.css.map */
