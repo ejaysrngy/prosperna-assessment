@@ -54,7 +54,7 @@ export default function IndividualItem({item}) {
           src="/images/shopping-cart-add(1).png"
           alt="cart"
         />
-        {showItemPopUp && ReactDOM.createPortal(<ItemPopUp item={cart[0]}/>, document.getElementById("modal"))}
+        {showItemPopUp && ReactDOM.createPortal(<ItemPopUp item={cart[0]} popUpIsActive={setShowItemPopUp}/>, document.getElementById("modal"))}
         <Link
           to={{
             pathname: "/checkout",

@@ -1,3 +1,18 @@
+#modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .item-popup {
   position: absolute;
   z-index: 10;
@@ -6,10 +21,7 @@
   margin: 10px auto;
   padding: 1% 1%;
   background-color: #fff;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 15%;
 }
 
 .item-popup__indivitem {
