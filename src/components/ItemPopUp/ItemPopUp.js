@@ -2,7 +2,7 @@ import React from "react";
 import "./ItemPopUp.css";
 import { ItemContext } from "../ItemContext";
 
-export default function ItemPopUp({item}) {
+export default function ItemPopUp({item, popUpIsActive}) {
   const SHOE_SIZES = [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5];
   const [quantity, setQuantity] = React.useState(1);
   // const {cart} = React.useContext(ItemContext)
@@ -45,7 +45,7 @@ export default function ItemPopUp({item}) {
           </div>
           <div className="checkout-continue">
             <button id="checkout" className="checkout-continue__button"> CONTINUE TO CHECKOUT </button>
-            <button id="cart" className="checkout-continue__button"> Add to cart </button>
+            <button onClick={() => {popUpIsActive(false)}} id="cart" className="checkout-continue__button"> Add to cart </button>
           </div>
         </div>
       </div>
