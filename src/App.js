@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLanding from "./components/MainLanding";
 import Checkout from "./components/Checkout/Checkout";
+import NotFound from "./components/NotFound";
 import React from "react";
 import { ItemContext } from "../src/components/ItemContext";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
@@ -35,6 +36,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<MainLanding />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/404" element={<NotFound />} />
           </Routes>
         <Footer />
         </ItemContext.Provider>
