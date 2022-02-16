@@ -1,7 +1,7 @@
-// import Header from "../components/Header/Header";
+import Header from "../components/Header/Header";
 import Content from "../components/Content/Content";
 import Shop from "../components/Shop/Shop";
-// import Footer from "../components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import Banner from "../components/Banner/Banner";
 // import ItemPopUp from "./ItemPopUp/ItemPopUp";
 import { ItemContext } from "./ItemContext";
@@ -13,12 +13,12 @@ export default function MainLanding() {
 
   return (
     <div>
-        {/* <Header /> */}
+        <Header />
         <Content />
         <Shop />
         {/* {cart.length > 0 && <ItemPopUp />} */}
         <Banner />
-        {/* <Footer /> */}
+        <Footer />
     </div>
   );
 }
