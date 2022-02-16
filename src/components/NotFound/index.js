@@ -1,7 +1,10 @@
 import React from "react";
-import style from "./NotFound.scss";
+import "./NotFound.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function NotFound() {
+  const navigate = useNavigate();
+
   return (
     <div className={"error"}>
       <div className={"error-image"}>
@@ -11,7 +14,7 @@ export default function NotFound() {
         <h1> Oops! </h1>
         <p> The page you're looking for does not exist</p>
         <div className={`error-buttons`}>
-          <button className="go-back-button">Go Back</button>
+          <button onClick={() => navigate(-1)} className="go-back-button">Go Back</button>
           <button className="report-error-button">Report Error</button>
         </div>
       </div>
